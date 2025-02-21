@@ -1,0 +1,144 @@
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+
+.button {
+  font-family: 'AssistantR';
+  font-size: 1.2rem;
+  width: 300px;
+  height: 70px;
+  color: #7a6351;
+  background: linear-gradient(135deg, #ffeee0 0%, #ffdcc3 100%);
+  padding: 20px 30px;
+  border: none;
+  border-radius: 18px;
+  direction: rtl;
+  cursor: pointer;
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 
+      0 6px 20px rgba(190, 160, 130, 0.25),
+      0 2px 8px rgba(190, 160, 130, 0.15),
+      inset 0 2px 5px rgba(255, 255, 255, 0.5);
+}
+
+/* Screen size 350px-450px */
+@media screen and (min-width: 350px) and (max-width: 450px) {
+  .button {
+    width: 260px;
+    height: 60px;
+    font-size: 1.1rem;
+    padding: 15px 25px;
+    border-radius: 16px;
+  }
+  
+  .center {
+    padding: 12px;
+  }
+}
+
+/* Screen size below 350px */
+@media screen and (max-width: 349px) {
+  .button {
+    width: 220px;
+    height: 50px;
+    font-size: 1rem;
+    padding: 12px 20px;
+    border-radius: 14px;
+  }
+  
+  .center {
+    padding: 10px;
+  }
+  
+  .button::after {
+    border-radius: 14px;
+  }
+}
+
+/* Rest of your original CSS remains the same */
+.buttonContent {
+  position: relative;
+  z-index: 2;
+  transition: all 0.5s ease;
+}
+
+@keyframes breathe {
+  0%, 100% {
+      transform: scale(1);
+      opacity: 0.5;
+  }
+  50% {
+      transform: scale(1.05);
+      opacity: 0.3;
+  }
+}
+
+.ripple {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120%;
+  height: 120%;
+  background: radial-gradient(
+      circle,
+      rgba(255, 232, 214, 0.8) 0%,
+      rgba(255, 249, 242, 0) 70%
+  );
+  border-radius: 50%;
+  opacity: 0;
+  animation: breathe 3s ease-in-out infinite;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  color: #8a7361;
+  box-shadow: 
+      0 8px 25px rgba(190, 160, 130, 0.3),
+      0 4px 12px rgba(190, 160, 130, 0.2),
+      inset 0 2px 5px rgba(255, 255, 255, 0.5);
+}
+
+.button:hover .buttonContent {
+  transform: scale(1.02);
+}
+
+.button:hover .ripple {
+  opacity: 0.5;
+}
+
+.button:active {
+  transform: translateY(1px);
+  box-shadow: 
+      0 4px 15px rgba(190, 160, 130, 0.2),
+      0 2px 6px rgba(190, 160, 130, 0.1),
+      inset 0 1px 3px rgba(255, 255, 255, 0.3);
+}
+
+@keyframes pulse {
+  0% {
+      box-shadow: 0 0 0 0 rgba(190, 160, 130, 0.4);
+  }
+  70% {
+      box-shadow: 0 0 0 10px rgba(190, 160, 130, 0);
+  }
+  100% {
+      box-shadow: 0 0 0 0 rgba(190, 160, 130, 0);
+  }
+}
+
+.button::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 18px;
+  animation: pulse 2s infinite;
+}
