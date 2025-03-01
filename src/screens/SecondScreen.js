@@ -5,8 +5,8 @@ import focus from "../images/שילוב בין הפיזי לנפשי.png"
 import ball from "../images/שילוב הפן הפיזי.png"
 import Button from "../components/button/Button"
 import phone from "../Icons/wired-lineal-1682-shake-phone-hover-pinch.json"
-import dizzy from "../Icons/wired-lineal-1252-dizz-hover-pinch.json"
-import friends from "../Icons/wired-lineal-274-male-and-two-female-hover-nodding.json"
+import dizzy from "../Icons/wired-lineal-529-boy-girl-children-hover-pinch (1).json"
+import friends from "../Icons/wired-lineal-527-boy-young-men-hover-pinch.json"
 import Experienced from "../components/experienced/Can"
 const SecondScreen=()=>{
 

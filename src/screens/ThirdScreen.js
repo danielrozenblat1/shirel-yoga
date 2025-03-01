@@ -1,11 +1,11 @@
 // ThirdScreen.jsx
 import { useState } from "react";
 import styles from "./ThirdScreen.module.css";
-import help1 from "../images/יוגה עוזרת 1.png"
-import help2 from "../images/יוגה עוזרת 2.png"
-import help3 from "../images/יוגה עוזרת 3.png"
-import help4 from "../images/יוגה עוזרת 4.png"
-import help5 from "../images/יוגה עוזרת 5.png"
+import help1 from "../images/יוגה 1.png"
+import help2 from "../images/יוגה 2.png"
+import help3 from "../images/יוגה עוזרת 4.png"
+import help4 from "../images/יוגה 4.png"
+import help5 from "../images/יוגה 5.png"
 import Button from "../components/button/Button";
 const ThirdScreen = () => {
     const [hoveredImage, setHoveredImage] = useState(null);

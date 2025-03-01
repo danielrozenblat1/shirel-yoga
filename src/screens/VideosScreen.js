@@ -10,7 +10,7 @@ const VideosScreen=()=>{
 
 
   
-    const videos=[{src:video1},{src:video2},{src:video3}]
+    const videos=[{src:video1}]
     return <>
     
 

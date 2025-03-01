@@ -45,7 +45,7 @@ const FirstScreen = () => {
       </div>
       
       <div className={styles.contentBox}>
-        <h1 className={styles.title}>YOGA WITH SHIREL</h1>
+        <h1 className={styles.title}>יוגה לילדים עם שיראל</h1>
         <div className={styles.description}>הדרכות וסדנאות יוגה במיוחד לילדים בגילאי 3-12</div>
         <div className={styles.arrowContainer}>
           <ChevronDown size={32} className={styles.bounceArrow} strokeWidth={1} color="#eecea4"/>

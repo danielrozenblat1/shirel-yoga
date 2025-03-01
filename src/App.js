@@ -8,6 +8,7 @@ import ForthScreen from './screens/ForthScreen';
 import ByMe from './components/ByMe/ByMe';
 import BackgroundGlass from './components/If/If';
 import VideosScreen from './screens/VideosScreen';
+import Where from './components/Where/Where';
 function App() {
   return <>
   <FirstScreen/>
@@ -16,6 +17,7 @@ function App() {
 <AboutSection/>
 <VideosScreen/>
 <BackgroundGlass/>
+<Where/>
 <ForthScreen/>
 
 <ByMe/>
