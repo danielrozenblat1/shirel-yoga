@@ -1,90 +1,56 @@
-import styles from "./Recommends.module.css"
-import result1 from "../../images/שיראל זגורי סדנאות 1.png"
-import result2 from "../../images/שיראל זגורי סדנאות 2.png"
-import result3 from "../../images/שיראל זגורי סדנאות 3.png"
-import result4 from "../../images/שיראל זגורי סדנאות 4.png"
-import result5 from "../../images/שיראל זגורי סדנאות 5.png"
+import React from 'react';
+import styles from './Students.module.css';
 
 
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-import Button from "../button/Button"
-const Recommends=()=>{
-    const sliderSettings = {
-     
-        infinite: true,
-        speed: 700,
-        autoplaySpeed: 2500,
-        infinite: true,
-   
-        dots:false,
-        
-        slidesToShow: window.innerWidth < 450 ? 1 :
-                 
-                      window.innerWidth <= 1050 ? 2 : 4,
-        slidesToScroll:1,
-                     
-      };
-      const content = [
-        {
-          type: 'image',
-          src: result1,
-        },
-       
-       
-        {
-          type: 'image',
-          src: result2,
-        },
-        {
-          type: 'image',
-          src: result3,
-        },
-        {
-          type: 'image',
-          src: result4,
-        }, 
-        
-        {
-          type: 'image',
-          src: result5,
-        },
+import result1 from "../../images/שיראל זגורי סדנאות 1.png";
+import result2 from "../../images/שיראל זגורי סדנאות 2.png";
+import result3 from "../../images/שיראל זגורי סדנאות 3.png";
+import result4 from "../../images/שיראל זגורי סדנאות 4.png";
+import result5 from "../../images/שיראל זגורי סדנאות 5.png";
+import result6 from "../../images/שיראל זגורי סדנאות 6.png";
+import result7 from "../../images/שיראל זגורי סדנאות 7.png";
 
-        ];  
-return <>
+const Students = () => {
+  const images = [
+    result1, result2, result3, result4,
+    result5,result6,result7,
+  ];
 
-<div className={styles.explain}>הכנתי מקבץ קטן של סדנאות שהעברתי, מוזמנים להחליק ולהתרשם</div>
-<div className={styles.sliderContainer}>
-        <Slider {...sliderSettings}>
-          {content.map((item, index) => (
-            <div key={index} itemscope itemtype="http://schema.org/Review">
-              {item.type === 'image' && (
-                <img src={item.src} className={styles.image1} alt={`שיראל יוגה לקוחה ממליצה מספר ${index + 1}`} itemprop="image"/>
-              )}
-              {item.type === 'video' && (
-                <video
-                  style={{ width: "100%",display:"flex",objectFit:"cover", margin: "auto", height: "100%" }}
-                  muted
-                  controls
-                
-                  itemprop="image"
-                >
-                  <source src={item.src} type="video/mp4" />
-             
-                </video>
-         
-              )}
-           <meta itemprop="datePublished" content={new Date().toISOString()} />
-            </div>
-            
-          ))}
-        </Slider>
+  return (
+    <>
+ 
+      <div className={styles.explain}>ואם תהיתם איך נראית אווירה בסדנא - ככה זה נראה</div>
+      <div className={styles.container}>
+        <div className={styles.scrollTrack}>
+          {/* קבוצה ראשונה של תמונות */}
+          <div className={styles.scrollContainer}>
+            {images.map((img, index) => (
+              <div key={`first-${index}`} className={styles.imageWrapper}>
+                <img
+                  src={img}
+                  alt={`שיראל זגורי סדנאות ${index + 1}`}
+                  className={styles.image}
+                />
+              </div>
+            ))}
+          </div>
+          {/* קבוצה שנייה זהה של תמונות */}
+          <div className={styles.scrollContainer}>
+            {images.map((img, index) => (
+              <div key={`second-${index}`} className={styles.imageWrapper}>
+                <img
+                  src={img}
+                  alt={`שיראל זגורי סדנאות ${index + 1}`}
+                  className={styles.image}
+                />
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
+  
+    </>
+  );
+};
 
-
-</>
-
-
-}
-export default Recommends
+export default Students;
