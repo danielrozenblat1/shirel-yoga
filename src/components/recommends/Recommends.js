@@ -19,7 +19,7 @@ const Students = () => {
   return (
     <>
  
-      <div className={styles.explain}>ואם תהיתם איך נראית אווירה בסדנא - ככה זה נראה</div>
+      <div className={styles.explain}>ואם תהיתם איך נראית האווירה בסדנא - ככה זה נראה</div>
       <div className={styles.container}>
         <div className={styles.scrollTrack}>
           {/* קבוצה ראשונה של תמונות */}
