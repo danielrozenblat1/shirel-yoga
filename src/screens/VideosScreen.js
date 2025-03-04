@@ -3,7 +3,7 @@ import Button from "../components/button/Button"
 
 import styles from "./VideosScreen.module.css"
 import VideoGallery from "../components/studioVideos/StudioVideos"
-import video1 from "../videos/שיראל יוגה 1.mp4"
+import video1 from "../videos/שיראל יוגה סדנאות.mp4"
 import video2 from "../videos/שיראל יוגה 2.mp4"
 import video3 from "../videos/שיראל יוגה 3.mp4"
 const VideosScreen=()=>{
