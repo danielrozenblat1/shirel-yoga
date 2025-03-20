@@ -68,7 +68,7 @@ const Where = () => {
   };
 
   const handleFacebookClick = () => {
-    window.open("https://www.facebook.com/shirel.zaguri", "_blank");
+    window.open("https://www.facebook.com/profile.php?id=61562495240912", "_blank");
   };
 
   const socialIcons = [
