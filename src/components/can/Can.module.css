@@ -1,0 +1,49 @@
+.container {
+  display: flex;
+  align-items: center;
+  margin: 2% auto;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  direction: rtl;
+  width: 320px;
+
+}
+
+.imageWrapper {
+  width: 30%;
+  margin-left: 10px;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  filter: drop-shadow(2px 2px 3px rgba(210, 155, 95, 0.4));
+}
+
+.text {
+  font-family: 'AssistantR', sans-serif;
+  font-size: 1.15rem;
+  direction: rtl;
+  margin-right: 10px;
+  width: 80%;
+  color: #795548; /* חום כהה יותר לקריאות טובה */
+}
+
+@media (max-width: 350px) {
+  .container {
+      width: 270px;
+      padding: 0.4rem 0.8rem;
+  }
+
+  .text {
+      width: 100%;
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+  }
+
+  .imageWrapper {
+      width: 30%;
+      text-align: center;
+  }
+}
