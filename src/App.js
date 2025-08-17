@@ -9,6 +9,7 @@ import ByMe from './components/ByMe/ByMe';
 import BackgroundGlass from './components/If/If';
 import VideosScreen from './screens/VideosScreen';
 import Where from './components/Where/Where';
+import PrivacyPolicy from './components/privacy/Privacy';
 function App() {
   return <>
   <FirstScreen/>
@@ -19,7 +20,12 @@ function App() {
 <BackgroundGlass/>
 <Where/>
 <ForthScreen/>
-
+<PrivacyPolicy 
+  ownerName="שיראל זגורי - שיראל יוגה" 
+  email="shirelzag9965@gmail.com" 
+  phone="+972 55-228-8368" 
+  domain="https://yoga-with-shirel.co.il/" 
+/>
 <ByMe/>
   </>
 }
